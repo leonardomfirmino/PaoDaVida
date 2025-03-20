@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Beneficiários</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/relatorio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+    <h1>Relatório de Beneficiários - Prioridade</h1>
+
+    <!-- Dropdown para escolher a cesta -->
+    <label for="cestaSelect">Escolha a Cesta:</label>
+    <select id="cestaSelect" class="form-control mb-3">
+        <option value="" disabled selected>Selecionar...</option>
+        <!-- Opções de cestas serão preenchidas dinamicamente -->
+    </select>
+
+    <button class="btn btn-primary mb-3" id="exportarExcel">Exportar para Excel</button>
+
+    <table id="tabela-beneficiarios">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Prioridade</th>
+                <th>Tipo</th>
+                <th>Número de Dependentes</th>
+                <th>Renda Familiar</th>
+                <th>Recebeu</th> 
+            </tr>
+        </thead>        
+        <tbody></tbody>
+    </table>    
+
+    <button class="btn btn-secondary mb-3" id="baixaBtn">Dar baixa</button>
+    <button class="btn btn-danger mb-3" id="voltarBtn">Voltar</button>
+
+     
+    <script src="../js/relatorio.js"></script>
+</body>
+</html>

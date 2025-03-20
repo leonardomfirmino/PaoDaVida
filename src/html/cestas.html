@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pão da Vida</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+
+<body>
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 p-4 my-auto">
+        <!-- Formulário de cestas -->
+        <form id="cestasForm" class="card card-body">
+          <div class="form-group">
+            <input type="text" id="tipo" placeholder="Tipo da doação" class="form-control" required autofocus>
+          </div>
+          <div class="form-group">
+            <input type="number" id="qtd" placeholder="Quantidade" step="1" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <p>Data de recebimento</p>
+            <input type="date" id="recebimento" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <p>Data de entrega</p>
+            <input type="date" id="entrega" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <textarea id="descricao" rows="3" placeholder="Descrição da doação" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+      </div>
+
+      <!-- Lista de Cestas -->
+      <div class="col-md-6">
+        <!-- Barra de pesquisa -->
+        <input type="text" id="pesquisaCestas" placeholder="Pesquisar cestas" class="form-control mb-3">
+
+        <div id="cestas"></div>
+      </div>
+    </div>
+
+    <!-- Botão de Voltar -->
+    <div class="text-center mt-3">
+      <button id="voltarBtn" class="btn btn-secondary">Voltar</button>
+    </div>
+  </main>
+
+  <script src="../js/cestas.js"></script>
+</body>
+
+</html>

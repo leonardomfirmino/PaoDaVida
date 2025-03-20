@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Beneficiário</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 p-4 my-auto">
+        <!-- Formulário de beneficiários -->
+        <form id="beneficiarioForm" class="card card-body">
+          <div class="form-group">
+            <input type="text" id="nomeBeneficiario" placeholder="Nome do Beneficiário" class="form-control" required autofocus>
+          </div>
+          <div class="form-group">
+            <select id="tipoBeneficiario" class="form-control" required>
+              <option value="">Tipo de Beneficiário</option>
+              <option value="Aluno">Aluno</option>
+              <option value="Nao Aluno">Não Aluno</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" id="nomeAluno" placeholder="Nome do Aluno (se aplicável)" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" id="cpfBeneficiario" placeholder="CPF do Beneficiário" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <input type="number" id="rendaFamiliar" placeholder="Renda Familiar" class="form-control" required>
+          </div>
+
+          <!-- Campo para autorizado -->
+          <div class="form-group">
+            <input type="text" id="nomeAutorizado" placeholder="Nome do Autorizado" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="cpfAutorizado" placeholder="CPF do Autorizado" class="form-control" required>
+          </div>
+
+          <!-- Dependentes Dinâmicos -->
+          <div id="dependentesContainer" class="form-group">
+            <h5>Dependentes</h5>
+            <button type="button" class="btn btn-secondary" id="addDependenteBtn">Adicionar Dependente</button>
+          </div>
+
+          <button type="submit" class="btn btn-primary mt-3">Salvar Beneficiário</button>
+        </form>
+
+        <!-- Botão de Voltar -->
+        <button type="button" class="btn btn-secondary mt-3" id="voltarBtn">Voltar</button>
+      </div>
+
+      <!-- Lista de Beneficiários -->
+      <div class="col-md-6">
+        <!-- Campo de pesquisa removido -->
+        <div id="beneficiariosContainer"></div>
+      </div>
+    </div>
+  </main>
+  
+  <script src="../js/beneficiario.js"></script>
+  <script>
+    // Função do botão Voltar
+    document.getElementById('voltarBtn').addEventListener('click', function() {
+      // Redireciona para a página anterior (por exemplo, para o menu ou outra tela)
+      window.history.back();
+    });
+  </script>
+</body>
+</html>
+
